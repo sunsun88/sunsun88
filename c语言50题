@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+   int n,max,min,i,sum=0;//n是平分的个数
+   float b;
+   scanf("%d",&n);
+   int a[n];
+   for(i=0;i<n;i++)
+   {
+       scanf("%d",&a[i]);
+   }
+  max=a[0];
+  min=a[0];
+   for(i=0;i<n;i++)
+   {
+       if(max<a[i])
+        max=a[i];
+       if(min>a[i])
+        min=a[i];
+       sum+=a[i];
+   }
+    b=(float)(sum-max-min)/(float)(n-2);
+   printf("最后计算出来的平均分是%3.2f",b);
+    return 0;
+}
